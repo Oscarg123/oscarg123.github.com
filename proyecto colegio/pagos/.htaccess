@@ -1,0 +1,80 @@
+<IfModule mod_rewrite.c> 
+	RewriteEngine on 
+ 
+	RewriteRule ^antena/create$ index.php?view=antena&type=create [L]
+	RewriteRule ^antena/delete/(.*)$ index.php?view=antena&type=delete&id=$1 [L]
+	RewriteRule ^antena/edit/(.*)$ index.php?view=antena&type=edit&id=$1 [L]
+	RewriteRule ^antena/index$ index.php?view=antena&type=index [L]
+	RewriteRule ^antena/show/(.*)$ index.php?view=antena&type=show&id=$1 [L]
+	RewriteRule ^cliente/create$ index.php?view=cliente&type=create [L]
+	RewriteRule ^cliente/delete/(.*)$ index.php?view=cliente&type=delete&id=$1 [L]
+	RewriteRule ^cliente/edit/(.*)$ index.php?view=cliente&type=edit&id=$1 [L]
+	RewriteRule ^cliente/history/(.*)$ index.php?view=cliente&type=history&id=$1 [L]
+	RewriteRule ^cliente/index$ index.php?view=cliente&type=index [L]
+	RewriteRule ^cliente/show/(.*)$ index.php?view=cliente&type=show&id=$1 [L]
+	RewriteRule ^cobrar/create$ index.php?view=cobrar&type=create [L]
+	RewriteRule ^cobrar/delete/(.*)$ index.php?view=cobrar&type=delete&id=$1 [L]
+	RewriteRule ^cobrar/edit/(.*)$ index.php?view=cobrar&type=edit&id=$1 [L]
+	RewriteRule ^cobrar/index$ index.php?view=cobrar&type=index [L]
+	RewriteRule ^cobrar/show/(.*)$ index.php?view=cobrar&type=show&id=$1 [L]
+	RewriteRule ^pago/create$ index.php?view=pago&type=create [L]
+	RewriteRule ^pago/delete/(.*)$ index.php?view=pago&type=delete&id=$1 [L]
+	RewriteRule ^pago/edit/(.*)$ index.php?view=pago&type=edit&id=$1 [L]
+	RewriteRule ^pago/index$ index.php?view=pago&type=index [L]
+	RewriteRule ^pago/show/(.*)$ index.php?view=pago&type=show&id=$1 [L]
+	RewriteRule ^paquete/create$ index.php?view=paquete&type=create [L]
+	RewriteRule ^paquete/delete/(.*)$ index.php?view=paquete&type=delete&id=$1 [L]
+	RewriteRule ^paquete/edit/(.*)$ index.php?view=paquete&type=edit&id=$1 [L]
+	RewriteRule ^paquete/index$ index.php?view=paquete&type=index [L]
+	RewriteRule ^paquete/show/(.*)$ index.php?view=paquete&type=show&id=$1 [L]
+	RewriteRule ^poblacion/create$ index.php?view=poblacion&type=create [L]
+	RewriteRule ^poblacion/delete/(.*)$ index.php?view=poblacion&type=delete&id=$1 [L]
+	RewriteRule ^poblacion/edit/(.*)$ index.php?view=poblacion&type=edit&id=$1 [L]
+	RewriteRule ^poblacion/index$ index.php?view=poblacion&type=index [L]
+	RewriteRule ^poblacion/show/(.*)$ index.php?view=poblacion&type=show&id=$1 [L]
+
+	RewriteRule ^usuario/create$ index.php?view=usuario&type=create [L]
+	RewriteRule ^usuario/delete/(.*)$ index.php?view=usuario&type=delete&id=$1 [L]
+	RewriteRule ^usuario/edit/(.*)$ index.php?view=usuario&type=edit&id=$1 [L]
+	RewriteRule ^usuario/index$ index.php?view=usuario&type=index [L]
+	RewriteRule ^usuario/show/(.*)$ index.php?view=usuario&type=show&id=$1 [L]
+
+	RewriteRule ^motivo/create$ index.php?view=motivo&type=create [L]
+	RewriteRule ^motivo/delete/(.*)$ index.php?view=motivo&type=delete&id=$1 [L]
+	RewriteRule ^motivo/edit/(.*)$ index.php?view=motivo&type=edit&id=$1 [L]
+	RewriteRule ^motivo/index$ index.php?view=motivo&type=index [L]
+	RewriteRule ^motivo/show/(.*)$ index.php?view=motivo&type=show&id=$1 [L]
+
+	RewriteRule ^empleado/create$ index.php?view=empleado&type=create [L]
+	RewriteRule ^empleado/delete/(.*)$ index.php?view=empleado&type=delete&id=$1 [L]
+	RewriteRule ^empleado/edit/(.*)$ index.php?view=empleado&type=edit&id=$1 [L]
+	RewriteRule ^empleado/index$ index.php?view=empleado&type=index [L]
+	RewriteRule ^empleado/show/(.*)$ index.php?view=empleado&type=show&id=$1 [L]
+
+	RewriteRule ^asistencia/create$ index.php?view=asistencia&type=create [L]
+	RewriteRule ^asistencia/delete/(.*)$ index.php?view=asistencia&type=delete&id=$1 [L]
+	RewriteRule ^asistencia/edit/(.*)$ index.php?view=asistencia&type=edit&id=$1 [L]
+	RewriteRule ^asistencia/index$ index.php?view=asistencia&type=index [L]
+	RewriteRule ^asistencia/show/(.*)$ index.php?view=asistencia&type=show&id=$1 [L]
+
+
+	RewriteRule ^404$ index.php?view=404 [L]
+	RewriteRule ^cobro$ index.php?view=cobro [L]
+	RewriteRule ^corte-diario$ index.php?view=corte-diario [L]
+	RewriteRule ^home$ index.php?view=home [L]
+	RewriteRule ^index$ index.php?view=index [L]
+
+	RewriteRule ^business_profile$ index.php?view=business_profile [L]
+
+	RewriteRule ^pagos-atrasados$ index.php?view=pagos-atrasados [L]
+
+	#Error 404 
+	ErrorDocument 404 http://localhost/empresas/rogelio/amabi/404 
+
+	Options All -Indexes
+</IfModule>
+#File Protected
+<files controller/Database.php>
+	order allow,deny
+	deny from all
+</files>
